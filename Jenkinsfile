@@ -24,13 +24,12 @@ pipeline {
       }
     }
 
-    stage('Build Docker Image') {
-    steps {   
-        script {
-            docker.build("sprinappimg:${env.BUILD_NUMBER}")
-        }
+    stage('Docker Build') {
+    	agent any
+      steps {
+      	sh 'docker build -t springappimg:latest .'
+      }
     }
-}
 
   }
 }
