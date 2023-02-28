@@ -24,5 +24,13 @@ pipeline {
       }
     }
 
+    stage('Build Docker Image') {
+    steps {   
+        script {
+            docker.build("sprinappimg:${env.BUILD_NUMBER}")
+        }
+    }
+}
+
   }
 }
