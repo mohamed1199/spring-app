@@ -1,9 +1,13 @@
 pipeline {
   agent any
 
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/mohamed1199/spring-app.git'
+      }
+
     stage('Build') {
       steps {
-        // Build the project with Gradle
         sh './gradlew build'
       }
     }
