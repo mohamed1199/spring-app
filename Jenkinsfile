@@ -2,12 +2,12 @@ pipeline {
   agent any
 
   stages {
-    stage('Checkout') {
+    /* stage('Checkout') {
       steps {
         // Checkout the source code from GitHub
         git 'https://github.com/mohamed1199/spring-app.git'
       }
-    }
+    } */
 
     stage('Build') {
       steps {
