@@ -10,7 +10,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        // Run unit tests with Gradle
+        // Run unit tests with Gradle ok
         sh './gradlew test'
       }
     }
