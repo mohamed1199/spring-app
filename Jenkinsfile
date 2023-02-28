@@ -5,7 +5,7 @@ pipeline {
       steps {
         git 'https://github.com/mohamed1199/spring-app.git'
       }
-
+    }
     stage('Build') {
       steps {
         sh './gradlew build'
@@ -26,4 +26,3 @@ pipeline {
       }
     }
   }
-}
