@@ -2,7 +2,7 @@ pipeline {
   agent any
   
   environment {
-    ECR_REPOSITORY_URI = '1234567890.dkr.ecr.us-east-1.amazonaws.com/my-image'
+    ECR_REPOSITORY_URI = '1234567890.dkr.ecr.us-east-1.amazonaws.com/myrepo'
   }
   
   stages {
