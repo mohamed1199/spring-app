@@ -17,13 +17,6 @@ pipeline {
       }
     }
 
-    stage('Package') {
-      steps {
-        // Package the application into a JAR file
-        sh './gradlew bootJar'
-      }
-    }
-
     stage('Docker Build') {
       steps {
       	sh 'docker build -t springappimg:latest .'
