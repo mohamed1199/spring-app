@@ -7,7 +7,7 @@ WORKDIR /usr/app
 COPY build/libs/demo-0.0.1-SNAPSHOT.jar /usr/app.jar
 
 # Expose port 80 for the container
-EXPOSE 80
+EXPOSE 80:80
 
 # Set the command to run when the container starts
 CMD ["java", "-jar", "/usr/app.jar"]
