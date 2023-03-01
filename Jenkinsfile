@@ -32,7 +32,7 @@ pipeline {
     
     stage('Push to ECR') {
       steps {
-        withAWS(credentials: ['aws-access-key-id', 'aws-secret-access-key', 'aws-default-region']) {
+        withAWS(credentials: ['aws-access-key-id', 'aws-secret-access-key']) {
           sh '$(aws ecr get-login --no-include-email)'
           sh "docker tag springappimg $ECR_REPOSITORY_URI:latest"
           sh "docker push $ECR_REPOSITORY_URI:latest"
