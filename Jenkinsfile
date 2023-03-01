@@ -2,8 +2,8 @@ pipeline {
   agent any
   
   environment {
-    AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
-    AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+    AWS_ACCESS_KEY_ID = credentials('AKIAWKBYFO27JLX5KXOT')
+    AWS_SECRET_ACCESS_KEY = credentials('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')
     AWS_DEFAULT_REGION = 'us-east-1'
     ECR_REPOSITORY_URI = '248393754086.dkr.ecr.us-east-1.amazonaws.com/myrepo'
   }
